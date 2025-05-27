@@ -1,0 +1,23 @@
+:root {
+	--container-max-width: 62rem;
+	--container-padding-inline: 1rem;
+
+	--s-xs: 0.5rem;
+	--s-sm: 1rem;
+	--s-md: 1.5rem;
+	--s-lg: 2rem;
+	--s-xl: 4rem;
+	--s-2xl: 6rem;
+
+	--bg: #191C23;
+	--bg-muted: #405063;
+	--fg: #fff;
+	--fg-primary: #FF3E00;
+
+	--fs-sm: 1rem;
+	--fs-md: 1.125rem;
+	--fs-lg: 1.25rem;
+	--fs-xl: 1.5rem;
+	--fs-2xl: 2.25rem;
+	--fs-3xl: 3rem;;
+}
