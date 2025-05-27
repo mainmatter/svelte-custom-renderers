@@ -43,24 +43,31 @@
 
 <style>
 	footer {
-		display: grid;
-		grid-template-columns: subgrid;
-		grid-column: leading / trailing;
+		display: flex;
+		grid-column: c1 / c6;
 		padding-block:  var(--s-lg);
+		font-size: var(--fs-sm);
+		align-items: center;
 	}
 
 	div {
-		grid-column: c1 / c3;
+		display: flex;
+		gap: var(--s-xs);
+	}
+
+	p {
+		white-space: nowrap;
 	}
 
 	ul {
 		display: flex;
 		padding: 0;
+		gap: var(--s-md);
 	}
 
 	.social {
+		margin-left: auto;
 		gap: var(--s-xs);
-		grid-column: c4 / c6;
 		justify-self: end;
 	}
 
@@ -69,6 +76,7 @@
 	}
 
 	a {
-		color: inherit
+		color: inherit;
+		text-decoration: none;
 	}
 </style>
