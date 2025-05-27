@@ -1,10 +1,12 @@
 <script>
-	import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 
 	function shuffle(array) {
-		let i = array.length, j, temp;
+		let i = array.length,
+			j,
+			temp;
 		while (--i > 0) {
-			j = Math. floor (Math. random () * (i + 1));
+			j = Math.floor(Math.random() * (i + 1));
 			temp = array[j];
 			array[j] = array[i];
 			array[i] = temp;
@@ -26,22 +28,26 @@
 		if (now - start > 1000) {
 			let next = Math.floor(Math.random() * options.length);
 			previous = current;
-			current = next === previous ? ((next + 1) % randomizedOptions.length) : next;
+			current = next === previous ? (next + 1) % randomizedOptions.length : next;
 			start = new Date().getTime();
 		}
 
 		requestAnimationFrame(render);
-	};
+	}
 
 	onMount(() => {
 		requestAnimationFrame(render);
 	});
 </script>
 
-
 <span class="flipper" data-flipper>
 	{#each randomizedOptions as option, i (i)}
-		<span class="option" data-current={i === current || null} data-previous={i === previous || null} aria-hidden={i > 0 ? true : null}>
+		<span
+			class="option"
+			data-current={i === current || null}
+			data-previous={i === previous || null}
+			aria-hidden={i > 0 ? true : null}
+		>
 			{option}
 		</span>
 	{/each}
@@ -75,7 +81,8 @@
 			transform: translateY(-100%);
 			color: var(--bg-muted);
 		}
-		90%,100% {
+		90%,
+		100% {
 			opacity: 1;
 			transform: translateY(0);
 			color: var(--fg-primary);
@@ -83,7 +90,8 @@
 	}
 
 	@keyframes out {
-		0%,10% {
+		0%,
+		10% {
 			opacity: 1;
 			transform: translateY(0);
 			filter: blur(0em);

@@ -4,9 +4,10 @@ body {
 	color: var(--fg);
 }
 
-
 html {
-	background:var(--bg)  radial-gradient(62.17% 59.87% at 62.17% 0%, var(--bg-light) 0%, var(--bg) 100%) top right no-repeat;
+	background: var(--bg)
+		radial-gradient(62.17% 59.87% at 62.17% 0%, var(--bg-light) 0%, var(--bg) 100%) top right
+		no-repeat;
 	background-size: 100% 100vh;
 	scrollbar-gutter: stable;
 }
@@ -17,14 +18,15 @@ body {
 	/* Creates a grid with 10 columns with gutter spacing between each column. The first and last column stretch to center the inner 8 columns on the page */
 
 	display: grid;
-	grid-template-areas: "leading . c1  .  c2  .  c3  .  c4  .  c5  .  c6 . trailing";
-	grid-template-columns: 1fr repeat(var(--grid-columns), var(--grid-gutter) var(--grid-column)) var(--grid-gutter) 1fr;
+	grid-template-areas: 'leading . c1  .  c2  .  c3  .  c4  .  c5  .  c6 . trailing';
+	grid-template-columns: 1fr repeat(var(--grid-columns), var(--grid-gutter) var(--grid-column)) var(
+			--grid-gutter
+		) 1fr;
 	grid-auto-rows: min-content;
-  margin-inline: auto;
+	margin-inline: auto;
 
-
-  font-size: var(--fs-md);
-  line-height: 1.5;
+	font-size: var(--fs-md);
+	line-height: 1.5;
 }
 
 body > div > * {

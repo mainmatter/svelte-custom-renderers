@@ -1,11 +1,11 @@
-@import "@fontsource/fira-sans/400.css";
-@import "@fontsource/fira-sans/700.css";
-@import "@fontsource/fira-mono/400.css";
-@import "@fontsource/fira-mono/700.css";
+@import '@fontsource/fira-sans/400.css';
+@import '@fontsource/fira-sans/700.css';
+@import '@fontsource/fira-mono/400.css';
+@import '@fontsource/fira-mono/700.css';
 
 :root {
-	--font-sans: "Fira Sans", sans-serif;
-	--font-mono: "Fira Mono", sans-serif;
+	--font-sans: 'Fira Sans', sans-serif;
+	--font-mono: 'Fira Mono', sans-serif;
 
 	font-synthesis: none;
 }

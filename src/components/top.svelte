@@ -46,7 +46,7 @@
 
 	nav :global(svg) {
 		height: 1em;
-		color: #9EB8D8;
+		color: #9eb8d8;
 	}
 
 	nav a {

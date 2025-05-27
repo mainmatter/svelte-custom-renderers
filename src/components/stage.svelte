@@ -1,5 +1,10 @@
 <script>
-	let data = 'Never gonna give you up, never gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry, never gonna say goodbye\nNever gonna tell a lie and hurt you\nNever gonna give you up, never gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry, never gonna say goodbye\nNever gonna tell a lie and hurt you'.split('').map((c) => c.charCodeAt(0).toString(2).padStart(8, '0')).join('').split('');
+	let data =
+		'Never gonna give you up, never gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry, never gonna say goodbye\nNever gonna tell a lie and hurt you\nNever gonna give you up, never gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry, never gonna say goodbye\nNever gonna tell a lie and hurt you'
+			.split('')
+			.map((c) => c.charCodeAt(0).toString(2).padStart(8, '0'))
+			.join('')
+			.split('');
 
 	function rand() {
 		return Math.floor(Math.random() * 12);
@@ -29,7 +34,8 @@
 		{/each}
 	</div>
 
-	<code class="code"><pre>&lt;<span>script</span>&gt;
+	<code class="code"
+		><pre>&lt;<span>script</span>&gt;
 // ...
 &lt;/<span>script</span>&gt;
 
@@ -43,7 +49,8 @@
 
 &lt;style&gt;
   /* ... */
-&lt;/style&gt;</pre></code>
+&lt;/style&gt;</pre></code
+	>
 </section>
 
 <style>
@@ -57,7 +64,7 @@
 	.data {
 		grid-column: c1 / c6;
 		grid-row: 1 / 3;
-		mask: radial-gradient(closest-side, black 30%, transparent 100% );
+		mask: radial-gradient(closest-side, black 30%, transparent 100%);
 		word-break: break-all;
 		font-family: var(--font-mono);
 		overflow: hidden;
@@ -126,7 +133,10 @@
 	}
 
 	@keyframes blink {
-		0%, 20%, 80%, 100% {
+		0%,
+		20%,
+		80%,
+		100% {
 			color: var(--bg);
 			text-shadow: 0 0 0.5em var(--bg);
 		}
@@ -146,10 +156,13 @@
 		position: relative;
 		grid-column: leading / c2;
 		grid-row: 1 / span 1;
-		background: #23272F;
+		background: #23272f;
 		margin-left: var(--grid-gutter);
 		border: 1px solid #303541;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15), 0px 2px 10px rgba(0, 0, 0, 0.15), 0px 2px 40px rgba(0, 0, 0, 0.28);
+		box-shadow:
+			0px 1px 2px rgba(0, 0, 0, 0.15),
+			0px 2px 10px rgba(0, 0, 0, 0.15),
+			0px 2px 40px rgba(0, 0, 0, 0.28);
 		border-radius: var(--s-xs);
 		font-size: 0.8125rem;
 		line-height: 1.3;

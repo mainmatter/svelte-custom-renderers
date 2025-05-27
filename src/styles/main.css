@@ -1,4 +1,4 @@
-@import "fonts.css" layer(fonts);
-@import "reset.css" layer(reset);
-@import "variables.css" layer(variables);
-@import "global.css";
+@import 'fonts.css' layer(fonts);
+@import 'reset.css' layer(reset);
+@import 'variables.css' layer(variables);
+@import 'global.css';
