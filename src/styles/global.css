@@ -1,0 +1,29 @@
+html,
+body {
+	font-family: var(--font-sans);
+	color: var(--fg);
+}
+
+
+html {
+	background:var(--bg)  radial-gradient(62.17% 59.87% at 62.17% 0%, var(--bg-muted) 0%, var(--bg) 100%) top right no-repeat;
+	background-size: 100% 100vh;
+}
+
+body {
+	min-height: 100vh;
+
+	/* Gutter */
+	--g: 2.5rem;
+
+	display: grid;
+	grid-template: "c1  .  c2  .  c3  .  c4  .  c5  .  c6  .  c7 . c8" min-content
+		/ 1fr var(--g) 1fr var(--g) 1fr var(--g) 1fr var(--g) 1fr var(--g) 1fr var(--g) 1fr var(--g) 1fr;
+	grid-auto-rows: min-content;
+	width: min(100%, var(--container-max-width) + var(--container-padding-inline) * 2);
+  margin-inline: auto;
+}
+
+h2 {
+	font-size: var(--fs-2xl);
+}
