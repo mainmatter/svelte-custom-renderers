@@ -1,9 +1,12 @@
 <script>
 	import IconExternal from '../icons/arrow-up-right-from-square.svelte';
+	import Logo from '../icons/logo.svelte';
 </script>
 
 <header>
-	<h1>Svelte Renderer API</h1>
+	<h1>
+		<Logo />
+	</h1>
 	<nav>
 		<ul>
 			<li><a href="/">Announcement <IconExternal /></a></li>
@@ -15,12 +18,13 @@
 	header {
 		display: grid;
 		grid-template-columns: subgrid;
-		grid-column: c1 / c8;
+		grid-column: leading / trailing;
 		padding-block: var(--s-xl);
+		font-size: var(--fs-sm);
 	}
 
 	h1 {
-		grid-column: c1 / c2;
+		grid-column: c1 / c3;
 	}
 
 	a {
@@ -28,10 +32,10 @@
 	}
 
 	nav {
-		grid-column: c3 / c8;
+		grid-column: c4 / c6;
 		display: flex;
 		justify-content: flex-end;
-		align-items: center;
+		align-items: end;
 	}
 
 	ul {
@@ -42,7 +46,7 @@
 
 	nav :global(svg) {
 		height: 1em;
-		fill: #9EB8D8;
+		color: #9EB8D8;
 	}
 
 	nav a {
