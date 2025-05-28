@@ -1,6 +1,6 @@
 <script>
 	import End from '../components/end.svelte';
-	import Sponsor from '../components/sponsor.svelte';
+	import Help from '../components/help.svelte';
 	import Top from '../components/top.svelte';
 
 	import '../styles/main.css';
@@ -12,5 +12,5 @@
 
 {@render children()}
 
-<Sponsor />
+<Help />
 <End />
