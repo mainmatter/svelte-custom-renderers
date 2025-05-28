@@ -1,4 +1,5 @@
 <script>
+	import Cta from '../components/cta.svelte';
 	import Flipper from '../components/flipper.svelte';
 	import Icons from '../components/icons.svelte';
 	import Section from '../components/section.svelte';
@@ -53,5 +54,8 @@
 		your company is excited about the potential of using Svelte across all your platforms, we invite
 		you to sponsor the project. Your support will help us finish the implementation and make it
 		stable, well-documented, and ready for everyone to use.
+	</p>
+	<p>
+		<Cta href="/">Get in Touch</Cta>
 	</p>
 </Section>
