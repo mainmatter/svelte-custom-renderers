@@ -50,7 +50,7 @@
 	}
 
 	div {
-		padding-block: calc(var(--s-2xl) / 2);
+		padding-block: var(--s-xl);
 		text-align: center;
 		grid-column: c2 / c5;
 	}
@@ -77,7 +77,7 @@
 		width: var(--s-xl);
 		height: var(--s-xl);
 		margin-inline: auto;
-		color: var(--fg-primary);
+		color: var(--primary);
 	}
 
 	li span {

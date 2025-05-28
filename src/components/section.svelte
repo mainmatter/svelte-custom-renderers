@@ -20,7 +20,7 @@
 	}
 
 	div {
-		padding-block: calc(var(--s-2xl) / 2);
+		padding-block: var(--s-xl);
 		text-align: center;
 		grid-column: c2 / c5;
 	}

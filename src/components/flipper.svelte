@@ -85,7 +85,7 @@
 		100% {
 			opacity: 1;
 			transform: translateY(0);
-			color: var(--fg-primary);
+			color: var(--primary);
 		}
 	}
 
@@ -95,7 +95,7 @@
 			opacity: 1;
 			transform: translateY(0);
 			filter: blur(0em);
-			color: var(--fg-primary);
+			color: var(--primary);
 		}
 		100% {
 			transform: translateY(100%);

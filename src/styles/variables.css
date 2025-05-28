@@ -12,9 +12,8 @@
 	--bg: #191c23;
 	--bg-light: #405063;
 	--bg-muted: #23272f;
-	--bg-mm: #6200ee;
 	--fg: #fff;
-	--fg-primary: #ff3e00;
+	--primary: #ff3e00;
 
 	/* @link https://utopia.fyi/clamp/calculator?a=375,1200,13—16|16—18|18—20|20—24|24—36|36—48&p=fs */
 	--fs-sm: clamp(0.8125rem, 0.7273rem + 0.3636vw, 1rem);
