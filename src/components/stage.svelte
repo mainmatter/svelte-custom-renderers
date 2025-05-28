@@ -34,23 +34,42 @@
 		{/each}
 	</div>
 
-	<code class="code"
-		><pre>&lt;<span>script</span>&gt;
-// ...
-&lt;/<span>script</span>&gt;
+	<div class="source">
+		<code class="code"
+			><pre>&lt;<span class="tg">script</span>&gt;
+  <span class="cm">// ...</span>
+&lt;/<span class="tg">script</span>&gt;
 
-&lt;Catalog&gt;
-  &lt;List&gt;
-    &lt;Image click=&quot;navigate()&quot; /&gt;
-  &lt;/List&gt;
-&lt;/Catalog&gt;
+&lt;<span class="tg">Catalog</span>&gt;
+  &lt;<span class="tg">List</span>&gt;
+    &lt;<span class="tg">Image</span> <span class="en">click</span><span class="kw">=</span><span
+					class="st">&quot;</span
+				><span class="fn">navigate</span>()<span class="st">&quot;</span> /&gt;
+  &lt;/<span class="tg">List</span>&gt;
+&lt;/<span class="tg">Catalog</span>&gt;
 
-&lt;Toolbar /&gt;
+&lt;<span class="tg">Toolbar</span> /&gt;
 
-&lt;style&gt;
-  /* ... */
-&lt;/style&gt;</pre></code
-	>
+&lt;<span class="tg">style</span>&gt;
+  <span class="cm">/* ... */</span>
+&lt;/<span class="tg">style</span>&gt;</pre></code
+		>
+	</div>
+
+	<div class="tui">
+		<pre class="code">Connected to SVELTE.shop
+
+Welcome to Svelte Terminal UI!
+Check out our catalog:
+
+1 Shirt
+2 Stickers
+3 Socks
+4 Paolo
+
+0 Exit
+</pre>
+	</div>
 </section>
 
 <style>
@@ -141,8 +160,8 @@
 			text-shadow: 0 0 0.5em var(--bg);
 		}
 		50% {
-			color: var(--fg-primary);
-			text-shadow: 0 0 0.5em var(--fg-primary);
+			color: var(--primary);
+			text-shadow: 0 0 0.5em var(--primary);
 		}
 	}
 
@@ -153,11 +172,9 @@
 	}
 
 	.code {
+		display: block;
 		position: relative;
-		grid-column: leading / c2;
-		grid-row: 1 / span 1;
 		background: #23272f;
-		margin-left: var(--grid-gutter);
 		border: 1px solid #303541;
 		box-shadow:
 			0px 1px 2px rgba(0, 0, 0, 0.15),
@@ -168,5 +185,55 @@
 		line-height: 1.3;
 		padding: var(--s-sm);
 		overflow: hidden;
+	}
+
+	.code pre {
+		color: #cccac2;
+	}
+
+	.code .tg {
+		color: #5ccfe6;
+	}
+
+	.code .en {
+		color: #73d0ff;
+	}
+
+	.code .kw {
+		color: #ffad66;
+	}
+
+	.code .fn {
+		color: #ffd173;
+	}
+
+	.code .st {
+		color: #d5ff80;
+	}
+
+	.code .cm {
+		color: #b8cfe680;
+	}
+
+	.source {
+		grid-column: leading / c3;
+		grid-row: 1 / span 1;
+		margin-left: var(--grid-gutter);
+	}
+
+	.source .code {
+		width: 38ch;
+	}
+
+	.tui {
+		grid-column: c4 / trailing;
+		grid-row: 1 / span 1;
+		margin-top: var(--s-2xl);
+		margin-right: var(--grid-gutter);
+		justify-self: end;
+	}
+
+	.tui .code {
+		width: 40ch;
 	}
 </style>
