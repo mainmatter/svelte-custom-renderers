@@ -6,6 +6,11 @@
 	import Stage from '../components/stage.svelte';
 </script>
 
+<svelte:head>
+	<title>Custom Renderers for Svelte</title>
+	<meta name="description" content="Help us enable cross-platform UI development and endless possibilities." />
+</svelte:head>
+
 <Stage />
 
 <Section>
