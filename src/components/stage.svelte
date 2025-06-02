@@ -9,22 +9,6 @@
 	function rand() {
 		return Math.floor(Math.random() * 12);
 	}
-
-	// Random bit flips
-	// function flip(element) {
-	// 	let on = (event) => {
-	// 		if (Math.random < 0.5) {
-	// 			return;
-	// 		}
-	// 		event.target.textContent = event.target.textContent === '1' ? '0' : '1';
-	// 	};
-
-	// 	element.addEventListener('animationiteration', on);
-
-	// 	return () => {
-	// 		element.removeEventListener('animationiteration', on);
-	// 	}
-	// }
 </script>
 
 <section>
