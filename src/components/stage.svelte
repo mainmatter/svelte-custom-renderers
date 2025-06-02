@@ -136,15 +136,19 @@ Check out our catalog:
 	}
 
 	.data {
-		mask: radial-gradient(closest-side, black 30%, transparent 100%);
+		mask: radial-gradient(closest-side, black 40%, transparent 100%);
 		word-break: break-all;
 		font-family: var(--font-mono);
 		overflow: hidden;
-		height: 24lh;
+		height: 22lh;
 		-webkit-user-select: none;
 		user-select: none;
 		font-size: var(--fs-sm);
 		line-height: 1.1;
+		width: 100%;
+		max-width: 76em;
+		margin-inline: auto;
+		box-shadow: inset 5px solid red;
 	}
 
 	.data span {
@@ -222,7 +226,7 @@ Check out our catalog:
 
 	.float {
 		width: 100%;
-		max-width: 67rem;
+		max-width: calc(var(--container) + 2 * var(--container-padding-inline));
 		margin-inline: auto;
 	}
 
@@ -285,7 +289,7 @@ Check out our catalog:
 	.tui {
 		position: absolute;
 		top: 3rem;
-		right: 5rem;
+		right: 17%;
 		z-index: 2;
 	}
 
@@ -296,7 +300,7 @@ Check out our catalog:
 	.raw {
 		position: absolute;
 		bottom: 1rem;
-		left: 20%;
+		left: 25%;
 		z-index: 1;
 		margin-left: var(--grid-gutter);
 		grid-column: c2 / c6;
@@ -332,7 +336,7 @@ Check out our catalog:
 		overflow: hidden;
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 1rem;
 		z-index: 4;
 		width: 12rem;
 		height: 23rem;
@@ -390,7 +394,7 @@ Check out our catalog:
 	.browser {
 		position: absolute;
 		bottom: 0;
-		right: 2rem;
+		right: 8%;
 		z-index: 3;
 		width: 20rem;
 		height: 14rem;
