@@ -11,24 +11,34 @@
 	}
 </script>
 
-<section>
-	<div class="data" role="presentation" aria-hidden="true">
+<section role="presentation" aria-hidden="true">
+	<div class="data">
 		{#each data as c, i (i)}
 			<span class={`c${rand()}`}>{c}</span>
 		{/each}
 	</div>
+	<div class="float">
+		<div class="raw">
+			<span class="bar">&lt;List></span>
+			<div>
+				<span class="bar">&lt;Image</span><br />
+				<span class="dot">&nbsp;</span><span class="dot">&nbsp;</span><span class="dot">&nbsp;</span
+				>
+			</div>
+			<span class="bar">&lt;Toolbar></span>
+		</div>
 
-	<div class="source">
-		<code class="code"
-			><pre>&lt;<span class="tg">script</span>&gt;
+		<div class="source">
+			<code class="code"
+				><pre>&lt;<span class="tg">script</span>&gt;
   <span class="cm">// ...</span>
 &lt;/<span class="tg">script</span>&gt;
 
 &lt;<span class="tg">Catalog</span>&gt;
   &lt;<span class="tg">List</span>&gt;
     &lt;<span class="tg">Image</span> <span class="en">click</span><span class="kw">=</span><span
-					class="st">&quot;</span
-				><span class="fn">navigate</span>()<span class="st">&quot;</span> /&gt;
+						class="st">&quot;</span
+					><span class="fn">navigate</span>()<span class="st">&quot;</span> /&gt;
   &lt;/<span class="tg">List</span>&gt;
 &lt;/<span class="tg">Catalog</span>&gt;
 
@@ -37,11 +47,11 @@
 &lt;<span class="tg">style</span>&gt;
   <span class="cm">/* ... */</span>
 &lt;/<span class="tg">style</span>&gt;</pre></code
-		>
-	</div>
+			>
+		</div>
 
-	<div class="tui">
-		<pre class="code">Connected to SVELTE.shop
+		<div class="tui">
+			<pre class="code">Connected to SVELTE.shop
 
 Welcome to Svelte Terminal UI!
 Check out our catalog:
@@ -53,6 +63,15 @@ Check out our catalog:
 
 0 Exit
 </pre>
+		</div>
+
+		<div class="phone">
+			<span></span><span></span><span></span><span></span>
+		</div>
+
+		<div class="browser">
+			<span></span><span></span><span></span><span></span>
+		</div>
 	</div>
 </section>
 
@@ -61,12 +80,62 @@ Check out our catalog:
 		display: grid;
 		grid-template-columns: subgrid;
 		grid-column: leading / trailing;
-		overflow-x: hidden;
+	}
+
+	section > div {
+		position: relative;
+		grid-column: 1 / -1;
+		grid-row: 1 / span 1;
+	}
+
+	section > div > div {
+		--scale: scale(min(calc(100vw / 1024px), 1));
+		--delta: 0.5rem;
+
+		transform: var(--scale);
+		animation: float 15s linear infinite;
+	}
+
+	section > div > div:nth-child(2) {
+		animation-delay: -1.5s;
+	}
+
+	section > div > div:nth-child(3) {
+		animation-delay: -4s;
+	}
+
+	section > div > div:nth-child(4) {
+		animation-delay: -6.3s;
+	}
+
+	@keyframes float {
+		0%, 100% {
+			transform: var(--scale) translate(0, 0);
+		}
+		12.5% {
+			transform: translate(calc(var(--delta) * 0.66),calc(var(--delta) * -0.66));
+		}
+		25% {
+			transform: translate(calc(var(--delta) * 1), -calc(var(--delta) * -1));
+		}
+		37.5% {
+			transform: translate(calc(var(--delta) * 1.66), calc(var(--delta) * -0.66));
+		}
+		50% {
+			transform: translate(calc(var(--delta) * 2), 0);
+		}
+		62.5% {
+			transform: translate(calc(var(--delta) * 1.66), calc(var(--delta) * 0.66));
+		}
+		75% {
+			transform: translate(calc(var(--delta) * 1), calc(var(--delta) * 1));
+		}
+		87.5% {
+			transform: translate(calc(var(--delta) * 0.33), calc(var(--delta) * 0.66));
+		}
 	}
 
 	.data {
-		grid-column: c1 / c6;
-		grid-row: 1 / 3;
 		mask: radial-gradient(closest-side, black 30%, transparent 100%);
 		word-break: break-all;
 		font-family: var(--font-mono);
@@ -131,10 +200,6 @@ Check out our catalog:
 		animation-delay: calc(var(--step) * -1);
 	}
 
-	.data .c11 {
-		animation-delay: 0;
-	}
-
 	@keyframes blink {
 		0%,
 		20%,
@@ -155,15 +220,21 @@ Check out our catalog:
 		}
 	}
 
+	.float {
+		width: 100%;
+		max-width: 67rem;
+		margin-inline: auto;
+	}
+
 	.code {
 		display: block;
 		position: relative;
 		background: #23272f;
 		border: 1px solid #303541;
 		box-shadow:
-			0px 1px 2px rgba(0, 0, 0, 0.15),
-			0px 2px 10px rgba(0, 0, 0, 0.15),
-			0px 2px 40px rgba(0, 0, 0, 0.28);
+		0px 0.0625rem 0.125rem rgba(0, 0, 0, 0.35),
+		0px 0.125rem 0.625rem rgba(0, 0, 0, 0.35),
+		0px 0.125rem 2.5rem rgba(0, 0, 0, 0.528);
 		border-radius: var(--s-xs);
 		font-size: 0.8125rem;
 		line-height: 1.3;
@@ -200,24 +271,146 @@ Check out our catalog:
 	}
 
 	.source {
-		grid-column: leading / c3;
-		grid-row: 1 / span 1;
-		margin-left: var(--grid-gutter);
+		position: absolute;
+		top: 0.5rem;
+		left: 0;
+		z-index: 1;
 	}
 
 	.source .code {
 		width: 38ch;
+		justify-self: end;
 	}
 
 	.tui {
-		grid-column: c4 / trailing;
-		grid-row: 1 / span 1;
-		margin-top: var(--s-2xl);
-		margin-right: var(--grid-gutter);
-		justify-self: end;
+		position: absolute;
+		top: 3rem;
+		right: 5rem;
+		z-index: 2;
 	}
 
 	.tui .code {
 		width: 40ch;
+	}
+
+	.raw {
+		position: absolute;
+		bottom: 1rem;
+		left: 20%;
+		z-index: 1;
+		margin-left: var(--grid-gutter);
+		grid-column: c2 / c6;
+		grid-row: 1 / span 1;
+		font-size: 0.75rem;
+		font-family: var(--font-mono);
+		animation: none;
+	}
+
+	.raw span {
+		margin: 0 1em 0.5em 0;
+		padding: 0.25em 0.5em;
+		border-radius: 2em;
+		display: inline-block;
+		background: var(--primary);
+	}
+
+	.raw div {
+		align-items: center;
+		padding-left: calc(1lh + 0.5em);
+	}
+
+	.raw .bar {
+		min-width: 15em;
+	}
+
+	.raw .dot {
+		width: calc(1lh + 0.5em);
+		height: calc(1lh + 0.5em);
+	}
+
+	.phone {
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 4;
+		width: 12rem;
+		height: 23rem;
+		padding: 2.5rem 1rem 1rem 0.5rem;
+		box-shadow:
+			inset 0 0 0 0.0625rem #303541,
+			inset 0 0 0 0.25rem #23272f,
+			0px 0.0625rem 0.125rem rgba(0, 0, 0, 0.35),
+			0px 0.125rem 0.625rem rgba(0, 0, 0, 0.35),
+			0px 0.125rem 2.5rem rgba(0, 0, 0, 0.528);
+		border-radius: 2rem;
+		background: linear-gradient(180deg, #d7e5f5 0%, #ffffff 100%);
+	}
+
+	.phone:after {
+		content: '';
+		position: absolute;
+		top: 0.85rem;
+		left: calc(50% - 2rem);
+		width: 4rem;
+		height: 1rem;
+		background: #23272f;
+		border-radius: 1em;
+		clear: both;
+	}
+
+	.phone:before,
+	.phone span,
+	.browser:before,
+	.browser span {
+		background: #d0d8e2;
+		border-radius: 0.5rem;
+	}
+
+	.phone:before,
+	.browser:before {
+		content: '';
+		position: absolute;
+		bottom: 1.5rem;
+		left: 1rem;
+		right: 1rem;
+		height: 2rem;
+	}
+
+	.phone span,
+	.browser span {
+		display: block;
+		float: left;
+		width: calc(50% - 0.5rem);
+		padding-top: 50%;
+		margin-left: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.browser {
+		position: absolute;
+		bottom: 0;
+		right: 2rem;
+		z-index: 3;
+		width: 20rem;
+		height: 14rem;
+		padding: 5rem 6rem 0 0;
+		box-shadow:
+			inset 0 0 0 0.0625rem #303541,
+			0px 0.0625rem 0.125rem rgba(0, 0, 0, 0.35),
+			0px 0.125rem 0.625rem rgba(0, 0, 0, 0.35),
+			0px 0.125rem 2.5rem rgba(0, 0, 0, 0.528);
+		border-radius: 1rem;
+		background: radial-gradient(0.5rem at 1rem 1rem, var(--primary) 100%, transparent 100%), radial-gradient(0.5rem at 2.25rem 1rem, #d0d8e2 100%, transparent 100%), radial-gradient(0.5rem at 3.5rem 1rem, #d0d8e2 100%, transparent 100%), linear-gradient(180deg, #23272f 0%, #23272f 2rem, #d7e5f5 2rem, #ffffff 100%);
+	}
+
+	.browser span {
+		padding-top: 4rem;
+	}
+
+	.browser:before {
+		top: 2.5rem;
+		left: 0.5rem;
+		right: 0.5rem;
 	}
 </style>
