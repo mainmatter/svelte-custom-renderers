@@ -56,6 +56,6 @@
 		stable, well-documented, and ready for everyone to use.
 	</p>
 	<p>
-		<Cta href="/">Get in Touch</Cta>
+		<Cta href="https://mainmatter.notion.site/20664e58ddfa80a38291f605a0e229b3" target="_blank" rel="noopener noreferrer nofollow">Get in Touch</Cta>
 	</p>
 </Section>
