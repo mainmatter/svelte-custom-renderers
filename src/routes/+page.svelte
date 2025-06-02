@@ -2,6 +2,7 @@
 	import Cta from '../components/cta.svelte';
 	import Flipper from '../components/flipper.svelte';
 	import Icons from '../components/icons.svelte';
+	import Resources from '../components/resources.svelte';
 	import Section from '../components/section.svelte';
 	import Stage from '../components/stage.svelte';
 </script>
@@ -64,3 +65,16 @@
 		<Cta href="https://mainmatter.notion.site/20664e58ddfa80a38291f605a0e229b3" target="_blank" rel="noopener noreferrer nofollow">Get in Touch</Cta>
 	</p>
 </Section>
+
+<Resources items={[
+	{
+		href: 'https://mainmatter.com/blog/2025/05/22/native-apps-with-svelte/',
+		title: 'Announcement Blog Post',
+		description: 'Read Paolo Ricciuti\'s blog post announcing the project and its goals.',
+	},
+	{
+		href: 'https://github.com/mainmatter/svelte-lynx-integration',
+		title: 'POC: Svelte + Lynx',
+		description: 'GitHub repository for Paolo Ricciuti\'s proof-of-concept for building native apps using Lynx through Svelte.',
+	},
+]} />
