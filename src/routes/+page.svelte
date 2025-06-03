@@ -2,18 +2,17 @@
 	import Cta from '../components/cta.svelte';
 	import Flipper from '../components/flipper.svelte';
 	import Icons from '../components/icons.svelte';
+	import Meta from '../components/meta.svelte';
 	import Resources from '../components/resources.svelte';
 	import Section from '../components/section.svelte';
 	import Stage from '../components/stage.svelte';
 </script>
 
-<svelte:head>
-	<title>Custom Renderers for Svelte</title>
-	<meta
-		name="description"
-		content="Help us enable cross-platform UI development and endless possibilities."
-	/>
-</svelte:head>
+<Meta
+	title="Custom Renderers for Svelte"
+	description="Help us enable cross-platform UI development and endless possibilities."
+	url="svelte-custom-renderers.com"
+/>
 
 <Stage />
 
