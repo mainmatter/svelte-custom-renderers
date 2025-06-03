@@ -1,5 +1,5 @@
 <script>
-	import ogImage from '../assets/og_image.jpg';
+	import ogImage from '../assets/og-image.jpg';
 
 	let { title, description, url } = $props();
 </script>

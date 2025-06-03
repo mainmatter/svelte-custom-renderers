@@ -9,8 +9,8 @@
 </script>
 
 <Meta
-	title="Custom Renderers for Svelte"
-	description="Help us enable cross-platform UI development and endless possibilities."
+	title="Custom Renderers for Svelte, a Mainmatter Initiative"
+	description="Help us enable cross-platform UI development with Svelte for endless possibilities."
 	url="svelte-custom-renderers.com"
 />
 
