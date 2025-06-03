@@ -57,19 +57,21 @@
 
 	ul {
 		grid-column: c1 / c6;
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+		grid-template-rows: 1fr auto;
 		list-style: none;
-		padding: 0 0 0 var(--s-md);
-		justify-items: center;
+		padding: 0;
 		gap: var(--s-md);
+		justify-items: center;
 	}
 
 	li {
+		grid-row: span 2;
+		grid-template-rows: subgrid;
 		display: grid;
-		align-items: center;
-		justify-content: center;
 		width: max(calc(20% - var(--s-md)), 6rem);
+		gap: 0;
 	}
 
 	li :global(svg) {
@@ -84,5 +86,6 @@
 		display: block;
 		margin-top: var(--s-sm);
 		text-align: center;
+		align-self: start;
 	}
 </style>
