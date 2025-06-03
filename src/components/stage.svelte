@@ -114,25 +114,25 @@ Check out our catalog:
 			transform: var(--scale) translate(0, 0);
 		}
 		12.5% {
-			transform: translate(calc(var(--delta) * 0.66), calc(var(--delta) * -0.66));
+			transform: var(--scale) translate(calc(var(--delta) * 0.66), calc(var(--delta) * -0.66));
 		}
 		25% {
-			transform: translate(calc(var(--delta) * 1), -calc(var(--delta) * -1));
+			transform: var(--scale) translate(calc(var(--delta) * 1), -calc(var(--delta) * -1));
 		}
 		37.5% {
-			transform: translate(calc(var(--delta) * 1.66), calc(var(--delta) * -0.66));
+			transform: var(--scale) translate(calc(var(--delta) * 1.66), calc(var(--delta) * -0.66));
 		}
 		50% {
-			transform: translate(calc(var(--delta) * 2), 0);
+			transform: var(--scale) translate(calc(var(--delta) * 2), 0);
 		}
 		62.5% {
-			transform: translate(calc(var(--delta) * 1.66), calc(var(--delta) * 0.66));
+			transform: var(--scale) translate(calc(var(--delta) * 1.66), calc(var(--delta) * 0.66));
 		}
 		75% {
-			transform: translate(calc(var(--delta) * 1), calc(var(--delta) * 1));
+			transform: var(--scale) translate(calc(var(--delta) * 1), calc(var(--delta) * 1));
 		}
 		87.5% {
-			transform: translate(calc(var(--delta) * 0.33), calc(var(--delta) * 0.66));
+			transform: var(--scale) translate(calc(var(--delta) * 0.33), calc(var(--delta) * 0.66));
 		}
 	}
 
