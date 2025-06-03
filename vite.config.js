@@ -1,9 +1,17 @@
 import { svelteTesting } from '@testing-library/svelte/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import { codecovVitePlugin } from '@codecov/vite-plugin';
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	plugins: [
+		sveltekit(),
+		codecovVitePlugin({
+			enableBundleAnalysis: process.env.CODECOV_TOKEN !== undefined,
+			bundleName: 'svelte-custom-renderers',
+			uploadToken: process.env.CODECOV_TOKEN,
+		}),
+	],
 	test: {
 		workspace: [
 			{
