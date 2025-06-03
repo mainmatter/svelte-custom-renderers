@@ -18,6 +18,7 @@
 		text-decoration: none;
 		white-space: nowrap;
 		align-items: center;
+		border-radius: var(--s-2xl);
 	}
 
 	a :global(svg) {

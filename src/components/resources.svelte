@@ -24,7 +24,7 @@
 		grid-template-columns: subgrid;
 		grid-column: leading / trailing;
 		background: var(--bg-muted);
-		padding-block: var(--s-xl);
+		padding-block: var(--s-xl) var(--s-2xl);
 	}
 
 	h2 {
