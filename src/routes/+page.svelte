@@ -9,7 +9,10 @@
 
 <svelte:head>
 	<title>Custom Renderers for Svelte</title>
-	<meta name="description" content="Help us enable cross-platform UI development and endless possibilities." />
+	<meta
+		name="description"
+		content="Help us enable cross-platform UI development and endless possibilities."
+	/>
 </svelte:head>
 
 <Stage />
@@ -62,19 +65,26 @@
 		stable, well-documented, and ready for everyone to use.
 	</p>
 	<p>
-		<Cta href="https://mainmatter.notion.site/20664e58ddfa80a38291f605a0e229b3" target="_blank" rel="noopener noreferrer nofollow">Get in Touch</Cta>
+		<Cta
+			href="https://mainmatter.notion.site/20664e58ddfa80a38291f605a0e229b3"
+			target="_blank"
+			rel="noopener noreferrer nofollow">Get in Touch</Cta
+		>
 	</p>
 </Section>
 
-<Resources items={[
-	{
-		href: 'https://mainmatter.com/blog/2025/05/22/native-apps-with-svelte/',
-		title: 'Announcement Blog Post',
-		description: 'Read Paolo Ricciuti\'s blog post announcing the project and its goals.',
-	},
-	{
-		href: 'https://github.com/mainmatter/svelte-lynx-integration',
-		title: 'POC: Svelte + Lynx',
-		description: 'GitHub repository for Paolo Ricciuti\'s proof-of-concept for building native apps using Lynx through Svelte.',
-	},
-]} />
+<Resources
+	items={[
+		{
+			href: 'https://mainmatter.com/blog/2025/05/22/native-apps-with-svelte/',
+			title: 'Announcement Blog Post',
+			description: "Read Paolo Ricciuti's blog post announcing the project and its goals."
+		},
+		{
+			href: 'https://github.com/mainmatter/svelte-lynx-integration',
+			title: 'POC: Svelte + Lynx',
+			description:
+				"GitHub repository for Paolo Ricciuti's proof-of-concept for building native apps using Lynx through Svelte."
+		}
+	]}
+/>

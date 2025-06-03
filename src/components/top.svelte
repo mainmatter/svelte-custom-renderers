@@ -9,7 +9,13 @@
 	</h1>
 	<nav>
 		<ul>
-			<li><a href="https://mainmatter.com/blog/2025/05/22/native-apps-with-svelte/" target="_blank" rel="noopener noreferrer nofollow">Announcement <IconExternal /></a></li>
+			<li>
+				<a
+					href="https://mainmatter.com/blog/2025/05/22/native-apps-with-svelte/"
+					target="_blank"
+					rel="noopener noreferrer nofollow">Announcement <IconExternal /></a
+				>
+			</li>
 		</ul>
 	</nav>
 </header>

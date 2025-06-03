@@ -109,11 +109,12 @@ Check out our catalog:
 	}
 
 	@keyframes float {
-		0%, 100% {
+		0%,
+		100% {
 			transform: var(--scale) translate(0, 0);
 		}
 		12.5% {
-			transform: translate(calc(var(--delta) * 0.66),calc(var(--delta) * -0.66));
+			transform: translate(calc(var(--delta) * 0.66), calc(var(--delta) * -0.66));
 		}
 		25% {
 			transform: translate(calc(var(--delta) * 1), -calc(var(--delta) * -1));
@@ -236,9 +237,9 @@ Check out our catalog:
 		background: #23272f;
 		border: 1px solid #303541;
 		box-shadow:
-		0px 0.0625rem 0.125rem rgba(0, 0, 0, 0.35),
-		0px 0.125rem 0.625rem rgba(0, 0, 0, 0.35),
-		0px 0.125rem 2.5rem rgba(0, 0, 0, 0.528);
+			0px 0.0625rem 0.125rem rgba(0, 0, 0, 0.35),
+			0px 0.125rem 0.625rem rgba(0, 0, 0, 0.35),
+			0px 0.125rem 2.5rem rgba(0, 0, 0, 0.528);
 		border-radius: var(--s-xs);
 		font-size: 0.8125rem;
 		line-height: 1.3;
@@ -405,7 +406,11 @@ Check out our catalog:
 			0px 0.125rem 0.625rem rgba(0, 0, 0, 0.35),
 			0px 0.125rem 2.5rem rgba(0, 0, 0, 0.528);
 		border-radius: 1rem;
-		background: radial-gradient(0.5rem at 1rem 1rem, var(--primary) 100%, transparent 100%), radial-gradient(0.5rem at 2.25rem 1rem, #d0d8e2 100%, transparent 100%), radial-gradient(0.5rem at 3.5rem 1rem, #d0d8e2 100%, transparent 100%), linear-gradient(180deg, #23272f 0%, #23272f 2rem, #d7e5f5 2rem, #ffffff 100%);
+		background:
+			radial-gradient(0.5rem at 1rem 1rem, var(--primary) 100%, transparent 100%),
+			radial-gradient(0.5rem at 2.25rem 1rem, #d0d8e2 100%, transparent 100%),
+			radial-gradient(0.5rem at 3.5rem 1rem, #d0d8e2 100%, transparent 100%),
+			linear-gradient(180deg, #23272f 0%, #23272f 2rem, #d7e5f5 2rem, #ffffff 100%);
 	}
 
 	.browser span {
