@@ -5,15 +5,13 @@
 
 <section>
 	<div>
-		<h2>Need help building?</h2>
+		<h2>Need Svelte Support?</h2>
 
 		<p>
-			Mainmatter is here to empower your team to fully realize those benefits in your web and
-			backend projects.
+			Mainmatter is here to empower your team to succeed with Svelte in your projects.
 		</p>
 		<p>
-			Getting started with Svelte and SvelteKit is straightforward but an experienced partner can
-			help ensure you're set up for success from the beginning.
+			We offer a comprehensive range of Svelte and SvelteKit workshops, covering everything from foundational concepts to advanced techniques. Our experts also collaborate closely with teams already using Svelte—accelerating development, solving complex challenges, and providing hands-on mentoring directly within your projects.
 		</p>
 
 		<p>

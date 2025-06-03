@@ -33,7 +33,7 @@
 
 	<p>
 		Custom Svelte renderers unlock the ability to use Svelte beyond the browser. This enables
-		organizations to use the same technology across platforms like the web apps and native apps.
+		organizations to use the same technology across platforms like the web as well as native apps.
 	</p>
 	<p>
 		With custom renderers, teams can reuse UI code across different output formats, streamlining
