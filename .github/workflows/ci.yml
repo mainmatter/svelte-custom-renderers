@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request: {}
+
+jobs:
+  lint:
+    name: Codecov
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.4
+
+      - name: install dependencies
+        run: pnpm install
+
+      - name: build
+        run: pnpm build
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
