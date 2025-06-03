@@ -1,5 +1,4 @@
 <script>
-	import ArrowRight from '../icons/arrow-right.svelte';
 	import Cta from './cta.svelte';
 </script>
 
@@ -41,5 +40,6 @@
 	p :global(a) {
 		background: #02ceba;
 		color: #fff;
+		border-radius: 0;
 	}
 </style>
