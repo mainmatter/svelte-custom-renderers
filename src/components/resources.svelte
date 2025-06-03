@@ -8,9 +8,9 @@
 	<h2>Resources</h2>
 
 	<ul>
-		{#each items as { href, title, description },index (index)}
+		{#each items as { href, title, description }, index (index)}
 			<li>
-				<a href={href} target="_blank" rel="noopener noreferrer nofollow">{title}</a>
+				<a {href} target="_blank" rel="noopener noreferrer nofollow">{title}</a>
 				{description}
 				<IconExternal />
 			</li>
@@ -54,9 +54,9 @@
 		background: var(--bg);
 		color: var(--fg-muted);
 		box-shadow:
-		0 0 0 rgba(0, 0, 0, 0.35),
-		0 0 0 rgba(0, 0, 0, 0.35),
-		0 0 0 rgba(0, 0, 0, 0.528);
+			0 0 0 rgba(0, 0, 0, 0.35),
+			0 0 0 rgba(0, 0, 0, 0.35),
+			0 0 0 rgba(0, 0, 0, 0.528);
 		transition: all 0.2s ease;
 	}
 
@@ -71,7 +71,7 @@
 
 	li a:before {
 		position: absolute;
-		content: "";
+		content: '';
 		display: block;
 		inset: 0;
 	}
@@ -79,9 +79,9 @@
 	li:has(a:hover) {
 		background: var(--bg-muted);
 		box-shadow:
-		0px 0.0625rem 0.125rem rgba(0, 0, 0, 0.25),
-		0px 0.125rem 0.625rem rgba(0, 0, 0, 0.25),
-		0px 0.125rem 2.5rem rgba(0, 0, 0, 0.28);
+			0px 0.0625rem 0.125rem rgba(0, 0, 0, 0.25),
+			0px 0.125rem 0.625rem rgba(0, 0, 0, 0.25),
+			0px 0.125rem 2.5rem rgba(0, 0, 0, 0.28);
 	}
 
 	li:has(a:hover) a {
