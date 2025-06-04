@@ -20,6 +20,4 @@
 	<meta property="twitter:url" content="https://{url}" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-
-	<script defer data-domain="svelte-custom-renderers.com" src="https://plausible.io/js/script.js"></script>
 </svelte:head>
