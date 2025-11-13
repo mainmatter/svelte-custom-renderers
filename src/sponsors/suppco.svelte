@@ -1,7 +1,7 @@
 <svg
 	{...$$restProps}
-	width="100%"
-	height="100%"
+	width="101"
+	height="27"
 	viewBox="0 0 101 27"
 	version="1.1"
 	xmlns="http://www.w3.org/2000/svg"
