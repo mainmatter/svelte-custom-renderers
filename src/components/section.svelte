@@ -23,5 +23,11 @@
 		padding-block: var(--s-xl);
 		text-align: center;
 		grid-column: c2 / c5;
+
+		:global {
+			p + h3 {
+				margin-top: var(--s-xl);
+			}
+		}
 	}
 </style>

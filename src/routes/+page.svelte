@@ -6,6 +6,7 @@
 	import Resources from '../components/resources.svelte';
 	import Section from '../components/section.svelte';
 	import Stage from '../components/stage.svelte';
+	import SuppCo from '../sponsors/suppco.svelte';
 </script>
 
 <Meta
@@ -60,8 +61,8 @@
 	<p>
 		But getting from prototype to a robust, production-ready foundation takes time and effort. If
 		your company is excited about the potential of using Svelte across all your platforms, we invite
-		you to sponsor the project. Your support will help us finish the implementation and make it
-		stable, well-documented, and ready for everyone to use.
+		you to join our supporters and sponsor the project. Your support will help us finish the
+		implementation and make it stable, well-documented, and ready for everyone to use.
 	</p>
 	<p>
 		<Cta
@@ -70,6 +71,8 @@
 			rel="noopener noreferrer nofollow">Get in Touch</Cta
 		>
 	</p>
+	<h3>Supporters</h3>
+	<SuppCo />
 </Section>
 
 <Resources
