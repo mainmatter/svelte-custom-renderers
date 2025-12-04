@@ -6,6 +6,8 @@
 	import Resources from '../components/resources.svelte';
 	import Section from '../components/section.svelte';
 	import Stage from '../components/stage.svelte';
+	import Support from '../components/support.svelte';
+	import SuppCo from '../sponsors/suppco.svelte';
 </script>
 
 <Meta
@@ -52,7 +54,16 @@
 	</p>
 </Icons>
 
-<Section title="Support the Project">
+<Support
+	title="Support the Project"
+	supporters={[
+		{
+			name: 'SuppCo',
+			logo: SuppCo,
+			url: 'https://supp.co'
+		}
+	]}
+>
 	<p>
 		Mainmatter has built a working prototype that proves this is not just an idea—it’s feasible and
 		already functional.
@@ -60,8 +71,8 @@
 	<p>
 		But getting from prototype to a robust, production-ready foundation takes time and effort. If
 		your company is excited about the potential of using Svelte across all your platforms, we invite
-		you to sponsor the project. Your support will help us finish the implementation and make it
-		stable, well-documented, and ready for everyone to use.
+		you to join our supporters and sponsor the project. Your support will help us finish the
+		implementation and make it stable, well-documented, and ready for everyone to use.
 	</p>
 	<p>
 		<Cta
@@ -70,7 +81,7 @@
 			rel="noopener noreferrer nofollow">Get in Touch</Cta
 		>
 	</p>
-</Section>
+</Support>
 
 <Resources
 	items={[

@@ -33,10 +33,14 @@ body > div > * {
 	grid-column: c1 / c6;
 }
 
-* + :is(p) {
+:where(* + :is(p, ul)) {
 	margin-top: var(--s-md);
 }
 
 h2 {
 	font-size: var(--fs-2xl);
+}
+
+h3 {
+	font-size: var(--fs-xl);
 }
