@@ -42,10 +42,14 @@
 		display: block;
 		width: 100%;
 		max-width: calc((100% / var(--logos-per-row) - var(--s-lg)) * (var(--logos-per-row) - 1));
+		height: 10rem;
 	}
 
 	li :global(svg) {
+		display: block;
 		width: 100%;
-		height: auto;
+		height: 100%;
+		max-height: 10rem;
+		object-fit: contain;
 	}
 </style>
