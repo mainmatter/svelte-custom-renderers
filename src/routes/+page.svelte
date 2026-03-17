@@ -8,6 +8,7 @@
 	import Stage from '../components/stage.svelte';
 	import Support from '../components/support.svelte';
 	import SuppCo from '../sponsors/suppco.svelte';
+	import Syntax from '../sponsors/syntax.svelte';
 </script>
 
 <Meta
@@ -61,6 +62,11 @@
 			name: 'SuppCo',
 			logo: SuppCo,
 			url: 'https://supp.co'
+		},
+		{
+			name: 'Syntax',
+			logo: Syntax,
+			url: 'https://syntax.fm'
 		}
 	]}
 >
